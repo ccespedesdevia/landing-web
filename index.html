@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webs para PYMES — Tu web en 7 días</title>
+<meta name="description" content="Diseño de páginas web para PYMES en Chile: landing, sitio corporativo o ecommerce con WhatsApp integrado. Lista en 7 días.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #16a34a;
+    --primary-dark: #15803d;
+    --dark: #111827;
+    --gray: #6b7280;
+    --light: #f9fafb;
+    --border: #e5e7eb;
+    --radius: 12px;
+    --shadow: 0 4px 20px rgba(17, 24, 39, 0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+  }
+
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  a { text-decoration: none; color: inherit; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+    border: none;
+    cursor: pointer;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-whatsapp { background: #25d366; color: #fff; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35); }
+  .btn-whatsapp:hover { background: #1ebe5b; }
+  .btn-outline { background: transparent; color: var(--dark); border: 2px solid var(--dark); }
+  .btn-outline:hover { background: var(--dark); color: #fff; }
+  .btn-primary { background: var(--primary); color: #fff; box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35); }
+  .btn-primary:hover { background: var(--primary-dark); }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1080px; margin: 0 auto; }
+  .logo { font-weight: 800; font-size: 20px; display: flex; align-items: center; gap: 8px; }
+  .logo-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--primary); }
+  .nav .btn { padding: 10px 20px; font-size: 14px; }
+
+  /* Hero */
+  .hero { padding: 80px 0 64px; background: linear-gradient(180deg, #fff 0%, var(--light) 100%); }
+  .hero .container { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
+  .badge {
+    display: inline-block;
+    background: #dcfce7;
+    color: var(--primary-dark);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+  }
+  .hero h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.15; font-weight: 800; margin-bottom: 20px; }
+  .hero h1 span { color: var(--primary); }
+  .hero p { font-size: 18px; color: var(--gray); max-width: 520px; margin-bottom: 32px; }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-trust { margin-top: 32px; font-size: 14px; color: var(--gray); display: flex; gap: 24px; flex-wrap: wrap; }
+  .hero-trust span { display: flex; align-items: center; gap: 6px; }
+  .mockup {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .mockup-bar { display: flex; gap: 6px; padding: 12px 16px; background: #f3f4f6; border-bottom: 1px solid var(--border); }
+  .mockup-bar i { width: 10px; height: 10px; border-radius: 50%; display: block; }
+  .mockup-bar i:nth-child(1) { background: #f87171; }
+  .mockup-bar i:nth-child(2) { background: #fbbf24; }
+  .mockup-bar i:nth-child(3) { background: #34d399; }
+  .mockup-body { padding: 24px; }
+  .mockup-line { height: 10px; background: var(--border); border-radius: 4px; margin-bottom: 12px; }
+  .mockup-line.w70 { width: 70%; }
+  .mockup-line.w50 { width: 50%; }
+  .mockup-line.w40 { width: 40%; }
+  .mockup-line.gray { background: #e5e7eb; }
+  .mockup-btn { width: 120px; height: 34px; border-radius: 6px; background: var(--primary); margin-top: 12px; }
+
+  /* Secciones generales */
+  section { padding: 64px 0; }
+  .section-tag { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--primary); margin-bottom: 8px; }
+  .section-title { font-size: clamp(26px, 3.5vw, 36px); font-weight: 800; margin-bottom: 16px; }
+  .section-sub { color: var(--gray); font-size: 17px; max-width: 640px; margin-bottom: 48px; }
+
+  /* Proyectos */
+  #proyectos { background: #fff; }
+  .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .project-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #fff;
+    transition: box-shadow 0.2s;
+  }
+  .project-card:hover { box-shadow: var(--shadow); }
+  .project-img { height: 160px; position: relative; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 22px; }
+  .project-img.p1 { background: linear-gradient(135deg, #f59e0b, #ea580c); }
+  .project-img.p2 { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+  .project-img.p3 { background: linear-gradient(135deg, #10b981, #059669); }
+  .project-body { padding: 20px; }
+  .project-body h3 { font-size: 18px; margin-bottom: 6px; }
+  .project-body p { font-size: 14px; color: var(--gray); margin-bottom: 12px; }
+  .project-result { font-size: 14px; font-weight: 600; color: var(--primary-dark); background: #dcfce7; display: inline-block; padding: 4px 10px; border-radius: 6px; }
+
+  /* Paquetes */
+  #paquetes { background: var(--light); }
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .price-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s;
+  }
+  .price-card:hover { box-shadow: var(--shadow); }
+  .price-card.featured {
+    border: 2px solid var(--primary);
+    position: relative;
+    box-shadow: 0 8px 30px rgba(22, 163, 74, 0.12);
+  }
+  .price-tag { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #fff; font-size: 13px; font-weight: 700; padding: 4px 16px; border-radius: 999px; }
+  .price-name { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+  .price-value { font-size: 34px; font-weight: 800; margin-bottom: 4px; }
+  .price-value small { font-size: 15px; font-weight: 500; color: var(--gray); }
+  .price-note { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
+  .price-list { list-style: none; margin-bottom: 28px; flex-grow: 1; }
+  .price-list li { padding: 8px 0 8px 28px; position: relative; font-size: 15px; border-bottom: 1px solid var(--border); }
+  .price-list li:last-child { border-bottom: none; }
+  .price-list li::before { content: "✓"; position: absolute; left: 0; color: var(--primary); font-weight: 700; }
+
+  /* FAQ */
+  #faq { background: #fff; }
+  .faq-list { max-width: 760px; margin: 0 auto; }
+  .faq-item { border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 16px; overflow: hidden; }
+  .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; font-weight: 600; cursor: pointer; background: #fff; }
+  .faq-q span:last-child { color: var(--primary); font-size: 22px; font-weight: 700; transition: transform 0.2s; }
+  .faq-item.open .faq-q span:last-child { transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+  .faq-item.open .faq-a { max-height: 200px; }
+  .faq-a p { padding: 0 24px 20px; color: var(--gray); }
+
+  /* CTA final */
+  #contacto { background: var(--dark); color: #fff; text-align: center; }
+  #contacto .section-title { color: #fff; }
+  #contacto .section-sub { color: #9ca3af; margin-left: auto; margin-right: auto; }
+  .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+  .cta-form { max-width: 420px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+  .cta-form input {
+    padding: 14px 18px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-family: inherit;
+  }
+  .cta-form input:focus { outline: 2px solid var(--primary); }
+
+  /* Footer */
+  footer { background: var(--dark); color: #9ca3af; border-top: 1px solid #1f2937; padding: 24px 0; font-size: 14px; }
+
+  /* Responsive */
+  @media (max-width: 860px) {
+    .hero .container, .projects-grid, .pricing-grid { grid-template-columns: 1fr; }
+    .hero { padding: 48px 0; }
+    .mockup { margin-top: 24px; }
+    .nav .btn { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo"><span class="logo-dot"></span> MiWebChile</div>
+    <a href="#contacto" class="btn btn-whatsapp">WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div>
+      <span class="badge">PYMES en Chile</span>
+      <h1>Tu negocio en internet, <span>lista en 7 días.</span></h1>
+      <p>Diseño, hosting y botón de WhatsApp integrado. Página profesional que convierte visitas en clientes — sin que tú programes nada.</p>
+      <div class="hero-actions">
+        <a href="#paquetes" class="btn btn-primary">Ver planes</a>
+        <a href="#contacto" class="btn btn-outline">Pedir mi demo gratis</a>
+      </div>
+      <div class="hero-trust">
+        <span>✓ Demo antes de pagar</span>
+        <span>✓ Posicionamiento en Google</span>
+        <span>✓ Edición sin programar</span>
+      </div>
+    </div>
+    <div class="mockup" aria-hidden="true">
+      <div class="mockup-bar"><i></i><i></i><i></i></div>
+      <div class="mockup-body">
+        <div class="mockup-line w70"></div>
+        <div class="mockup-line gray"></div>
+        <div class="mockup-line gray"></div>
+        <div class="mockup-line gray"></div>
+        <div class="mockup-line w40"></div>
+        <div class="mockup-btn"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <div class="container">
+    <div class="section-tag">Proyectos</div>
+    <h2 class="section-title">Algunos de nuestros diseños</h2>
+    <p class="section-sub">Ejemplos de lo que puedes esperar para tu negocio.</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-img p1">Ferretería Rengo</div>
+        <div class="project-body">
+          <h3>Ferretería Rengo</h3>
+          <p>Página única con catálogo de herramientas y pedidos por WhatsApp.</p>
+          <span class="project-result">+40% pedidos por WhatsApp</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img p2">Clínica Dental Sonríe</div>
+        <div class="project-body">
+          <h3>Clínica Dental Sonríe</h3>
+          <p>Sitio de 5 páginas con reserva de horas y formulario de contacto.</p>
+          <span class="project-result">+25% reservas de horas</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img p3">Gimnasio FitLab</div>
+        <div class="project-body">
+          <h3>Gimnasio FitLab</h3>
+          <p>Liga de captación con planes y botón de inscripción directa.</p>
+          <span class="project-result">+60 leads en el primer mes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="paquetes">
+  <div class="container">
+    <div class="section-tag">Precios</div>
+    <h2 class="section-title">Planes simples, sin sorpresas</h2>
+    <p class="section-sub">Un precio único, sin costos ocultos. Revisas el demo antes de pagar todo.</p>
+    <div class="pricing-grid">
+
+      <div class="price-card">
+        <h3 class="price-name">Básico</h3>
+        <div class="price-value">$180.000 <small>CLP una vez</small></div>
+        <p class="price-note">Ideal para negocios que necesitan presencia rápida.</p>
+        <ul class="price-list">
+          <li>Página única (landing)</li>
+          <li>Botón de WhatsApp integrado</li>
+          <li>Ubicación en Google Maps</li>
+          <li>Formulario de contacto</li>
+          <li>Diseño adaptado a celular</li>
+        </ul>
+        <a href="#contacto" class="btn btn-outline" style="justify-content:center;">Lo quiero</a>
+      </div>
+
+      <div class="price-card featured">
+        <span class="price-tag">Más elegido</span>
+        <h3 class="price-name">Estándar</h3>
+        <div class="price-value">$420.000 <small>CLP una vez</small></div>
+        <p class="price-note">Todo lo del Básico, para crecer tu presencia.</p>
+        <ul class="price-list">
+          <li>Hasta 5 páginas</li>
+          <li>Posicionamiento SEO en Google</li>
+          <li>Hosting y dominio por 1 año</li>
+          <li>Botón de WhatsApp y formulario</li>
+          <li>Capacitación para editar tú mismo</li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary" style="justify-content:center;">Lo quiero</a>
+      </div>
+
+      <div class="price-card">
+        <h3 class="price-name">Premium</h3>
+        <div class="price-value">$1.200.000 <small>CLP una vez</small></div>
+        <p class="price-note">Para vender online con catálogo y pagos.</p>
+        <ul class="price-list">
+          <li>Catálogo con carrito de compras</li>
+          <li>Pagos online (MercadoPago / Transbank)</li>
+          <li>Hasta 15 páginas</li>
+          <li>SEO + hosting 1 año</li>
+          <li>Soporte prioritario 30 días</li>
+        </ul>
+        <a href="#contacto" class="btn btn-outline" style="justify-content:center;">Lo quiero</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-tag">Preguntas frecuentes</div>
+    <h2 class="section-title">Resolvemos tus dudas</h2>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q"><span>¿Cómo es el proceso de trabajo?</span><span>+</span></div>
+        <div class="faq-a"><p>1) Me envías la información de tu negocio. 2) En 3 días tienes tu demo. 3) Pagas el 50% de adelanto. 4) Tu web queda lista en 7 días desde la aprobación.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>¿Necesito saber programar para editar mi página?</span><span>+</span></div>
+        <div class="faq-a"><p>No, para nada. Al finalizarla te capacito en 20 minutos para cambiar textos, fotos y precios por ti mismo.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>¿Mi negocio va a aparecer en Google?</span><span>+</span></div>
+        <div class="faq-a"><p>Sí, incluimos posicionamiento en Google Maps y SEO básico para que tu negocio sea encontrado por clientes locales.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>¿Qué pasa si no me gusta el diseño?</span><span>+</span></div>
+        <div class="faq-a"><p>Revisas el demo antes de pagar el resto. Si no te convence, no pagas el saldo. Tu riesgo es cero.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container">
+    <div class="section-tag">Contacto</div>
+    <h2 class="section-title">¿Listo para tener tu web en 7 días?</h2>
+    <p class="section-sub">Escríbeme por WhatsApp y te envío tu demo personalizado gratis, sin compromiso.</p>
+    <div class="cta-actions">
+      <a href="https://wa.me/56" class="btn btn-whatsapp" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+      <a href="#" class="btn btn-outline" style="background:transparent;color:#fff;border-color:#fff;">Ver otro ejemplo</a>
+    </div>
+    <form class="cta-form" action="#" method="post">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <button type="submit" class="btn btn-primary" style="justify-content:center;">Quiero mi demo</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+    <span>© 2026 MiWebChile. Santiago, Chile.</span>
+    <span>WhatsApp: +56 9 XXXX XXXX</span>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
+  });
+</script>
+
+</body>
+</html>
